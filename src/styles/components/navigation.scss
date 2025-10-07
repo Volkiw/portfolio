@@ -1,0 +1,102 @@
+@use '../core/variables';
+
+.menu {
+    padding: 3rem 2rem;
+    max-width: 1200px;
+    margin: auto;
+    height: 150px;
+    //display: block;
+    &__hamburguer {
+        border: none;
+        font-size: 1.5rem;
+        position: fixed;
+        left: 50px;
+        z-index: 200;
+        display: none;
+        background-color: variables.$main-color; 
+        z-index: 10;
+        padding: 0 0.25rem 0.1rem 0.2rem;
+        border-radius: 5px;
+        border: 1px solid variables.$secondary-color;
+        &:hover {
+            color: variables.$secondary-color;
+            transition: all ease-in 0.25s;   
+        }
+        &--scrolled {
+            display: block;
+            // box-shadow: rgba(255, 255, 255, 0.15) 0px 48px 100px 0px;
+        }
+    }
+    &__nav {
+        width: 20rem;
+        background-color: variables.$main-color; 
+        border-radius: 5px;
+        &--scrolled {
+            display: none;
+        }
+         &--open {
+            display: block;
+            position: fixed;
+            z-index: 10;
+        }
+         &--open-scrolled {
+            box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+            padding: 1rem;
+            left: 50px;
+        }
+    }
+    &__close {
+        display: none;
+        text-align: right;
+        width: 100%;
+        color: variables.$text-color;
+        &--scrolled {
+            display: block;
+        }
+        &:hover {
+            color: variables.$secondary-color;
+            cursor: pointer;
+            
+        }
+    }
+    &__li {
+        list-style-type: none;
+        padding: 0.2rem 0;
+    }
+    &__link {
+        color: variables.$text-color;
+        text-decoration: none;
+        max-width: 20rem;
+        cursor: pointer;
+        width: 100%;
+        padding-bottom: 0.2rem;
+        margin-bottom: 0.1rem;
+        position: relative;
+        display: inline-block;
+        transition: color ease 0.6s;
+        border-bottom: 2px solid #242424;
+         &::before {
+            position: absolute;
+            left: 0;
+            transition: all ease-in 0.8s;    
+            height: 2px;     
+        }
+        &::before {
+            width: 0%;
+            content: attr(data-word);
+            z-index: 2;
+            top: 0;
+            border-bottom: 2px solid variables.$secondary-color;
+            height: 100%;
+            color: variables.$secondary-color; 
+            overflow: hidden;        
+        }
+   
+        &:hover {
+            &::before {
+                width: 100%;  
+            }
+        }
+    }
+}
+

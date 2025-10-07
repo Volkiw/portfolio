@@ -1,0 +1,20 @@
+@use '../core/variables';
+
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    grid-auto-rows: minmax(100px, auto);
+    font-family: variables.$code-font;
+    margin-top: 2rem;
+    &__izq {
+        grid-column: 1 / 2;
+    }
+    &__dcha {
+        grid-column: 2 / 5;
+        font-weight: 400;
+    }
+    &__text--small {
+        font-size: 0.8rem;
+    }
+}

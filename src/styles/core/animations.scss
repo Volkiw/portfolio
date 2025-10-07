@@ -1,0 +1,127 @@
+
+@use '../core/variables';
+
+// texto imagen
+.animated-text {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 450px;
+    padding: 70px 0;
+    font-size: 57px;
+    font-family: variables.$plain-font;
+    font-weight: 900;
+    letter-spacing: -2px;
+    text-transform: uppercase;
+    transform: translate3d(0, 0, 0);
+    -webkit-font-smoothing: antialiased;
+    -webkit-font-kerning: normal;
+    -webkit-text-size-adjust: 100%;
+    &__text {
+        height: 55px;
+        overflow: hidden;
+        position: relative;
+        &:nth-child(odd) {
+            transform: skew(60deg, -30deg) scaleY(.66667);
+        }
+        &:nth-child(even) {
+            transform: skew(0deg, -30deg) scaleY(1.33333);
+        }
+        @for $i from 1 through 6 {
+            &:nth-child(#{$i}) {
+            left: 32px * $i;
+            }
+        }
+    } 
+
+    &__p {
+        height: 55px;
+        line-height: 50px;
+        padding: 0 10px;
+        transition: all 1s ease-in-out;
+        transform: translate3d(0, 0, 0);
+        vertical-align: top;
+        white-space: nowrap; 
+        max-width: 450px;
+    }
+    &:hover {
+        .animated-text__p{
+            transform: translate3d(0, -(65px), 0);  
+        }
+    }  
+
+}
+
+
+// palabras animadas
+.animated-word {
+    position: relative;
+    display: inline-block;
+    padding: 0 0.1rem;
+    transition: color ease 0.3s;
+    &--bg {
+        &::after {
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 5%;
+            left: 0;
+            bottom: 0;
+            background-color: variables.$secondary-color;
+            transition: all ease 0.3s;
+        }
+        &:hover {            
+            &::after {
+                height: 100%;
+            }
+        }
+
+    }
+    &--under {
+        &::before, &::after {
+            content: '';
+            position: absolute;
+            background-color: variables.$secondary-color;
+            z-index: -1;
+            height: 5%;
+        }
+        &::before {
+            width: 0%;
+            left: 0;
+            bottom: 0;
+            transition: width ease 0.4s;
+        }
+        &::after {
+            width: 100%;
+            left: 0;
+            bottom: 0; 
+            transition: all ease 0.6s;
+        }
+        &:hover {
+            &::before {
+                width: 100%;
+            }
+            &::after {
+                width: 0%;
+                left: 100%;
+                transition: all ease 0.2s;
+            }
+        }
+    }
+}
+
+
+// lupa
+
+.magnifier {
+    position: relative;
+    cursor: none;
+    &__glass {
+    cursor: none;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: cover;
+    pointer-events: none;
+    border-radius: 50%;
+    }
+}

@@ -1,0 +1,26 @@
+@use './variables';
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background-color: variables.$main-color;
+    color: variables.$text-color;
+    font-family: variables.$code-font;
+}
+
+.section {
+    max-width: 1200px;
+    padding: 4rem 2rem 2rem 2rem;
+    margin: auto;
+    color: variables.$text-color;
+    &__title {
+        font-size: 3rem;
+        font-weight: 300;
+        margin-bottom: 3rem;
+    }
+    &__text {
+        width: 100%;
+    }
+}
+

@@ -1,0 +1,13 @@
+@use '../core/variables';
+
+.footer {
+    margin: 2rem auto;
+    border-top: 1px solid rgb(203, 203, 203);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    &__arrow {
+        width: 1.5rem;
+    }
+}

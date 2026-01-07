@@ -7,7 +7,8 @@ return (
      <section className="section" id="about">
         <h2 className="section__title">ABOUT</h2>
         <div className="section__text">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi doloremque saepe <span className="animated-word animated-word--bg">totam beatae</span>, rem ex, suscipit dolorum iusto a quam amet vitae sed quidem odio quia, ducimus esse. <span className="animated-word animated-word--under">Voluptatibus</span>, odio?</p>
+                    <p>I am a web designer with <span className="animated-word animated-word--under">over 10 years of experience</span> blending visual design with HTML and CSS, recently expanding my skill set as a Full Stack Developer. Curious by nature and deeply drawn to code, I enjoy transforming ideas into clean, functional, and engaging digital experiences. I have worked both as a freelancer and in collaboration with companies such as X, X, and X, adapting easily to different teams and creative challenges.</p>
+                    <p>This very website has been developed using React and Sass, and you can take a look at its code on my GitHub through this <a className="animated-word animated-word--bg" href="https://github.com/Volkiw/portfolio" target="_blank">link</a>.</p>
         </div>
 
         <div className="about-grid">

@@ -14,7 +14,7 @@ function ProjectCard({projectData}) {
             </div>
             <div className="wrap-container__back ">
                <p className="card__text">{projectData.text}</p>
-               <Link to="/projectOne" className="card__link">know more ⇾</Link>
+               <Link to={projectData.link} className="card__link">know more ⇾</Link>
             </div>
           </div>
         </div>

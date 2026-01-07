@@ -8,6 +8,7 @@ import About from './components/about/About.jsx';
 import Contact from './components/contact/Contact.jsx';
 import Footer from './components/footer/Footer.jsx';
 import ProjectOne from './pages/projects/ProjectOne.jsx';
+import ProjectTwo from './pages/projects/ProjectTwo.jsx';
 
 
 
@@ -32,7 +33,15 @@ function App() {
           <ProjectOne /> 
       }/>
 
+      <Route path="/projectTwo" element={ 
+          <ProjectTwo /> 
+      }/>
+
+
+
       </Routes>
+
+     
     </>
   )
 }

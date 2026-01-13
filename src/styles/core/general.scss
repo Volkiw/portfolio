@@ -5,6 +5,7 @@ html {
 }
 body {
     background-color: variables.$main-color;
+    background: variables.$gradient-color;
     color: variables.$text-color;
     font-family: variables.$code-font;
 }
